@@ -53,8 +53,8 @@ print(s.endswith("Python"))          # False
 
 # 이전 문자열을 새로운 문자열로 치환하는 문자열 메소드
 # 문제) replace는 원본 문자열을 바꿀까요? 새로운 문자열을 만들까요? (새로운 문자열을 반환합니다)
-print(s.replace("Python", "Java"))   # 전체 치환
-print(s.replace("Python", "Java", 1))# 1개만 치환
+print(s.replace("Python", "C"))   # 전체 치환
+print(s.replace("Python", "C", 1))# 1개만 치환
 
 # 판별 문자열 메소드 (isXXX())
 print("123".isdigit())                # 숫자이면 True
