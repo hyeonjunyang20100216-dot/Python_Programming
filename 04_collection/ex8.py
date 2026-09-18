@@ -9,28 +9,29 @@ a = {1, 2, 3, 4}
 b = {3, 4, 5, 6}
 
 # 합집합
-                    # {1, 2, 3, 4, 5, 6}
-          
+print(a.union(b))                    # {1, 2, 3, 4, 5, 6}
+print(a | b)
 
 # 교집합
-                    # {3, 4}
-
+print(a.intersection(b))                    # {3, 4}
+print(a & b)
 
 # 차집합
-                    # {1, 2}
+print(a.difference(b))                    # {1, 2}
 
-                    # {5, 6}
+print(a - b)                    # {3, 4}
+print(b - a)                    # {5, 6}
 
 # 대칭 차집합 : 한쪽에만 있는 항목
-                    # {1, 2, 5, 6}
-
+print(a.symmetric_difference(b))                    # {1, 2, 5, 6}
+print(a ^ b)
 
 # 부분집합
 x = {1, 2}
 y = {1, 2, 3, 4}
 
-            # 부분집합
-          # 상위집합
+print(x.issubset)            # 부분집합
+print(y.issuperset(x))          # 상위집합
 
 
 # ===========================================================
@@ -40,14 +41,21 @@ y = {1, 2, 3, 4}
 s = {100, 10, 30, 5, 5, 5}
 
 # 집합 언패킹
+print(*s)
+
+a, *b, c = s
+print(a, b, c)
 
 # set -> list, tuple
-
+print(list(s))
+print(tuple(s))
 
 # list, tuple -> set
 a = [1, 2, 2, 3, 3, 3]
 b = (3, 3, 4, 4, 4, 5)
 
+print(set(a))
+print(set(b))
 
 
 # =========================================================
@@ -60,14 +68,14 @@ c_class = {"이영희", "최지훈", "박민수"}
 
 # 1️⃣ 두 수업 다 듣는 학생 출력하기
 
-                                        # ✅ {'이영희', '박민수'}
+print(python_class & c_class)                                        # ✅ {'이영희', '박민수'}
 
 
 # 2️⃣ Python만 듣는 학생 출력하기
 
-                                        # ✅ {'김철수'}
+print(python_class - c_class)                                        # ✅ {'김철수'}
 
 
 # 3️⃣ 둘 중 하나라도 듣는 학생 출력하기
 
-                                        # ✅ {'최지훈', '김철수', '이영희', '박민수'}
+print(python_class | c_class)                                        # ✅ {'최지훈', '김철수', '이영희', '박민수'}
